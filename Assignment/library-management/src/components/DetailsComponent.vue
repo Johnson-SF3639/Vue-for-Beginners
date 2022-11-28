@@ -17,14 +17,14 @@
           <td>{{detail.date}}</td>
         </tr>
         <tr>
-          <td>Description : </td>
+          <td>Description :</td>
         </tr>
         <tr>
           <td colspan="2">{{detail.description}}</td>
         </tr>
         <tr>
           <td></td>
-          <td><button @click="ShowMethod(detail)" disabled>Book</button></td>
+          <td><button @click="BookedStatus" :disabled="detail.status !== 'Available'">Book</button></td>
         </tr>
       </table>
     </div>
@@ -32,10 +32,33 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   props: {
     detail: Object,
-    ShowMethod: Function
+    index: Number
+  },
+  data () {
+    return {
+      buttonStatus: false,
+      updateStatus: ''
+    }
+  },
+  methods: {
+    ...mapActions([
+      'changeStatus'
+    ]),
+    BookedStatus () {
+      const status = 'Booked'
+      const index = this.index
+      const updateData = {
+        status,
+        index
+      }
+      console.log(updateData)
+      this.changeStatus(updateData)
+    }
   }
 }
 </script>

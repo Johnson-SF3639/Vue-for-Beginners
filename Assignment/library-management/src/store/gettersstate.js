@@ -34,5 +34,24 @@ export default {
   },
   upcomingBooks: (state) => {
     return state.upcomingBooks
+  },
+  catagoryDetails: (state) => {
+    var catagoryArray = []
+    for (let index = 0; index < state.details.length; index++) {
+      var check = false
+      if (catagoryArray.length === 0) {
+        catagoryArray.push(state.details[index].catagory)
+      } else {
+        for (let newIndex = 0; newIndex < catagoryArray.length; newIndex++) {
+          if (state.details[index].catagory === catagoryArray[newIndex] || index === newIndex) {
+            check = true
+          }
+        }
+        if (!check) {
+          catagoryArray.push(state.details[index].catagory)
+        }
+      }
+    }
+    return catagoryArray
   }
 }
