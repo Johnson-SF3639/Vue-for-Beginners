@@ -6,21 +6,21 @@
       <table cellpadding="15">
         <tr>
           <td>Title of Book : </td>
-          <td>{{detail.title}}</td>
+          <td><h3>{{detail.title}}</h3></td>
         </tr>
         <tr>
           <td>Author of Book : </td>
-          <td>{{detail.author}}</td>
+          <td><h3>{{detail.author}}</h3></td>
         </tr>
         <tr>
           <td>Date Published : </td>
-          <td>{{detail.date}}</td>
+          <td><h3>{{detail.date}}</h3></td>
         </tr>
         <tr>
           <td>Description :</td>
         </tr>
         <tr>
-          <td colspan="2">{{detail.description}}</td>
+          <td colspan="2"><h3>{{detail.description}}</h3></td>
         </tr>
         <tr>
           <td></td>

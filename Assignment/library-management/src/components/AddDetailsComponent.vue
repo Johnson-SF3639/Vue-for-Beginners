@@ -57,7 +57,6 @@ export default {
     ]),
     onSubmitForm () {
       const { title, author, date, catagory, description } = this.addDetails
-      console.log(date)
       const status = 'Available'
       const addData = {
         add: {

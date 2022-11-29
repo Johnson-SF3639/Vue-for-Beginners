@@ -7,8 +7,8 @@
       </select>
     </div>
     <div class="books_component_content">
-      <table border="1" cellpadding="15">
-        <tr>
+      <table cellpadding="15">
+        <tr id="table_head">
           <th>Title</th>
           <th>Author</th>
           <th>Category</th>
@@ -18,7 +18,7 @@
           <td>{{data.title}}</td>
           <td>{{data.author}}</td>
           <td>{{data.catagory}}</td>
-          <td><button @click="changeShowMethod(data, index)">More...</button></td>
+          <td><button  id="table_button" @click="changeShowMethod(data, index)">More...</button></td>
         </tr>
       </table>
     </div>

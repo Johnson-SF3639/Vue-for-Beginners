@@ -34,7 +34,6 @@ export default {
     const format2 = (dates.toLocaleDateString('en-Us', option2))
     const format3 = (dates.toLocaleDateString('en-Us', option3))
     const format4 = (dates.toLocaleDateString('en-Us', option4))
-    console.log(format1, format2, format3, format4)
     const day = format1 + ', ' + format2 + ' ' + format3 + ' ' + format4
     this.today = day
   }

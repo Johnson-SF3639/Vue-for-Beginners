@@ -1,6 +1,7 @@
 @import 'component/home'
 @import 'component/books'
 @import 'component/add'
+@import 'component/details'
 
 *
   margin: 0
@@ -34,7 +35,7 @@
     &_nav
       width: 20%
       height: 100%
-      background-color: rgb(255, 226, 226)
+      background-color: rgba(108, 173, 226, 0.396)
       position: fixed
       float: left
       text-align: center
@@ -42,8 +43,11 @@
       &_link
         text-decoration: none
         display: block
-        border: 1px solid #e28181
-        padding: 10% 0   
+        border: 1px solid #1d179b
+        padding: 10% 0  
+
+      &_link:hover
+        background-color: rgba(255, 255, 255, 0.897)       
 
     &_content
       margin-left: 20%
